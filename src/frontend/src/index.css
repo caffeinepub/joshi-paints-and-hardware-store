@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Main palette - light mode */
+    --background: 0.969 0.005 247;
+    --foreground: 0.17 0.01 247;
+    --card: 1 0 0;
+    --card-foreground: 0.17 0.01 247;
+    --popover: 1 0 0;
+    --popover-foreground: 0.17 0.01 247;
+    --primary: 0.52 0.1 210;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.94 0.005 247;
+    --secondary-foreground: 0.17 0.01 247;
+    --muted: 0.94 0.005 247;
+    --muted-foreground: 0.5 0.01 247;
+    --accent: 0.63 0.09 210;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.91 0.005 247;
+    --input: 0.91 0.005 247;
+    --ring: 0.52 0.1 210;
+
+    /* Chart colors */
+    --chart-1: 0.63 0.09 210;
+    --chart-2: 0.73 0.16 142;
+    --chart-3: 0.6 0.18 260;
+    --chart-4: 0.76 0.17 80;
+    --chart-5: 0.577 0.245 27.325;
+
+    /* Sidebar - navy gradient colors stored as hex for gradient use */
+    --sidebar: 0.18 0.05 247;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.52 0.1 210;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.52 0.1 210;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.25 0.04 247;
+    --sidebar-ring: 0.52 0.1 210;
+
+    /* Custom semantic tokens */
+    --navy-start: #0b1f3a;
+    --navy-end: #0a2a55;
+    --teal-active: #1f7e98;
+    --teal-accent: #2a9db0;
+    --success: 0.73 0.16 142;
+    --warning: 0.76 0.17 80;
+    --info: 0.6 0.18 260;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}
+
+/* Print styles for bills */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white !important;
+  }
+}
